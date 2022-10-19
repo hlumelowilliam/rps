@@ -2,6 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         
-        frame f = new frame();
+        game f = new game();
+        f.home();
     }
 }
