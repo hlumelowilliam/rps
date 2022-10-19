@@ -1,21 +1,18 @@
-import java.awt.Color;
-import java.awt.Font;
-
+import java.awt.*;
 import javax.swing.*;
 
 public class game {
 
-    private String title;
+    private String title;   // the title that will show on the Frame.
 
-    public game(String title) {
+    JFrame screen = new JFrame(this.title);      // the Frame body.
+
+    public game(String title) {        //title initialiser.
         this.title = title;
     } 
 
-    JFrame screen = new JFrame(this.title);
-
     public void gui() {    
         
-
         JLabel text1 = new JLabel();
         text1.setVerticalAlignment(JLabel.TOP);
         text1.setHorizontalAlignment(JLabel.CENTER);
@@ -23,7 +20,6 @@ public class game {
         text1.setText("Let's play Rock Paper Scissors !!!");
         text1.setFont(new Font("Verdana", Font.PLAIN, 18));
         
-
         screen.setSize(1080,800);
         screen.setLocation(120, 60);
         screen.getContentPane().setBackground(Color.ORANGE);
@@ -31,15 +27,6 @@ public class game {
         screen.add(text1);
         screen.setVisible(true);
 
-
-
-        int pScore = 0;
-        int cScore = 0;
-
-        while (true) {
-
-            
-        }
     }
     
 }
