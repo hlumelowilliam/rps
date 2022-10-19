@@ -8,6 +8,9 @@ public class game extends frame {
 
     }
 
+    private int pScore = 0;
+    private int cScore = 0;
+
     JButton start = new JButton("Start");
     JButton quit = new JButton("Quit");
 
@@ -43,12 +46,16 @@ public class game extends frame {
         quit.setVisible(false);
 
         text.setFont(new Font("Verdana", Font.PLAIN, 24));
-        //text.setVerticalAlignment(JLabel.CENTER);
-        //text.setHorizontalAlignment(JLabel.CENTER);
+        text.setVerticalAlignment(JLabel.TOP);
+        text.setHorizontalAlignment(JLabel.CENTER);
         text.setText("Let's Play !!!");
         text.setVisible(true);
-        text.setLocation(900, 100);
+        
         screen.add(text);
+
+        
+
+        
 
         
 
