@@ -36,6 +36,10 @@ public class game {
         quit.setLocation(600, 600);
         screen.add(start);
         screen.add(quit);
+
+        quit.addActionListener(e -> {
+            screen.dispose();
+        });
     }
     
 }
