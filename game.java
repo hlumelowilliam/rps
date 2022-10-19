@@ -20,13 +20,22 @@ public class game {
         text1.setText("Let's play Rock Paper Scissors !!!");
         text1.setFont(new Font("Verdana", Font.PLAIN, 18));
         
-        screen.setSize(1080,800);
+        screen.setSize(1080,900);
         screen.setLocation(120, 60);
         screen.getContentPane().setBackground(Color.ORANGE);
         screen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         screen.add(text1);
         screen.setVisible(true);
 
+        JButton start = new JButton("Start");
+        JButton quit = new JButton("Quit");
+        start.setBounds(50, 150, 100, 30);
+        quit.setBounds(50, 150, 100, 30);
+
+        start.setLocation(400, 600);
+        quit.setLocation(600, 600);
+        screen.add(start);
+        screen.add(quit);
     }
     
 }
