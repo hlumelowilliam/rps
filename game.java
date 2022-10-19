@@ -11,8 +11,10 @@ public class game {
         this.title = title;
     } 
 
+    JFrame screen = new JFrame(this.title);
+
     public void gui() {    
-        JFrame screen = new JFrame(this.title);
+        
 
         JLabel text1 = new JLabel();
         text1.setVerticalAlignment(JLabel.TOP);
