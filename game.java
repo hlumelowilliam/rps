@@ -3,12 +3,12 @@ import javax.swing.*;
 
 public class game {
 
-    private String title;   // the title that will show on the Frame.
+    private String title = "Rock Paper Scissors !!!";   // the title that will show on the Frame.
 
     JFrame screen = new JFrame(this.title);      // the Frame body.
 
-    public game(String title) {        //title initialiser.
-        this.title = title;
+    public game() {        //title initialiser.
+        gui();
     } 
 
     public void gui() {    
@@ -40,6 +40,27 @@ public class game {
         quit.addActionListener(e -> {
             screen.dispose();
         });
+
+        start.addActionListener(e -> {
+            play();
+        });
+
+    }
+
+    public void play() {
+
+        JButton r = new JButton("Rock");
+        r.setBounds(50, 150, 100, 30);
+        r.setLocation(300, 600);
+        screen.add(r);
+
+        JButton p = new JButton("Paper");
+        p.setBounds(50, 150, 100, 30);
+        JButton s = new JButton("Scissors");
+        s.setBounds(50, 150, 100, 30);
+
+
+
     }
     
 }
