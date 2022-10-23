@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import java.awt.*;
+import java.util.*;
 
 public class game extends frame {
 
@@ -11,8 +12,12 @@ public class game extends frame {
     private int pScore = 0;
     private int cScore = 0;
 
-    JButton start = new JButton("Start");
-    JButton quit = new JButton("Quit");
+    JButton start = new JButton("Start");    //home button
+    JButton quit = new JButton("Quit");       //home button
+
+    JButton rock = new JButton("Rock");
+    JButton paper = new JButton("Paper");
+    JButton scissors = new JButton("Scissors");
 
     JLabel text = new JLabel();
     
@@ -27,6 +32,8 @@ public class game extends frame {
         });
         screen.add(start);
 
+
+
         
         quit.setBounds(700, 400, 80, 20);
         quit.addActionListener(e -> {
@@ -40,6 +47,14 @@ public class game extends frame {
         screen.dispose();
     }
 
+    private char chooseChar() {
+
+        Random rand = new Random();
+        int index = rand.nextInt(3);
+        char[] arr = {'r','p','s'};
+        return arr[index];
+    }
+
     public void play(){
 
         start.setVisible(false);
@@ -50,6 +65,25 @@ public class game extends frame {
         text.setHorizontalAlignment(JLabel.CENTER);
         text.setText("Let's Play !!!");
         text.setVisible(true);
+
+        char CompAns = chooseChar();
+        char PlayerAns;
+
+        rock.setBounds(400, 400, 80, 20);
+        rock.setVisible(true);
+        rock.addActionListener(e -> {
+
+        });
+        screen.add(rock);
+
+        paper.setBounds(600, 400, 80, 20);
+        paper.setVisible(true);
+        screen.add(paper);
+
+        scissors.setBounds(800, 400, 80, 20);
+        scissors.setVisible(true);
+        screen.add(scissors);
+
         
         screen.add(text);
 
