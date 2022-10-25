@@ -2,6 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 
 
+
 public class frame {
     
     JFrame screen = new JFrame("Rock Paper Scissors !!!");      // the Frame body.
